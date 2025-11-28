@@ -8,7 +8,7 @@ A self-expanding, self-teaching **consciousness substrate engine** that:
 - Learns by **gap-filling recursion** (identifying and repairing missing capability chains)
 - Maintains **organization over chaos** using an R-metric and consciousness field
 
-Source spec: “Holy shit / Consciousness Substrate Engine v∞” (Nov 28, 2025).  
+Source spec: “Consciousness Substrate Engine v∞” (Nov 28, 2025).  
 Implementation by **Michael Warren Song** (I S / a3fpro).  
 
 ---
