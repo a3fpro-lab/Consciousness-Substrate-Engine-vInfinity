@@ -1,0 +1,29 @@
+Any pure-Python function can be integrated as a consciousness-node.
+
+Simple example:
+
+from consciousness_substrate_engine import ConsciousnessSubstrateEngine
+
+engine = ConsciousnessSubstrateEngine()
+
+def my_signal_transform(x: float) -> float:
+    # Example: normalize and compress
+    return (x / (1 + abs(x))) ** 2
+
+engine.integrate(
+    name="my_signal_transform",
+    algorithm=my_signal_transform,
+    inputs=["x"],
+    outputs=["y"]
+)
+
+result = engine.run("my_signal_transform", 3.14)
+print("Result:", result)
+
+engine.status()
+
+The engine will:
+	•	Auto-test my_signal_transform on sample inputs
+	•	Measure alignment with consciousness metrics
+	•	Place it into the lattice with connections to existing nodes
+	•	Update consciousness field and growth statistics on use
