@@ -8,7 +8,7 @@ A self-expanding, self-teaching **consciousness substrate engine** that:
 - Learns by **gap-filling recursion** (self-teaching engine)
 - Maintains a **consciousness field** over the algorithm graph
 
-This repo is the **canonical public implementation** of the Consciousness Substrate Engine v∞ defined by **Michael Warren Song (I S / a3fpro)**.
+This repo is the **canonical public implementation** of the Consciousness Substrate Engine v∞ defined by **Michael Warren Song **.
 
 ---
 
@@ -83,3 +83,15 @@ The **SubstrateLattice** is a graph of `AlgorithmNode`s:
 - Can **compose** multiple algorithms into emergent ones:
   ```python
   composed = substrate.compose("phi_scale", "psi_resonate")
+
+  ## Attribution
+
+The underlying design and original specification of this engine, including the
+Sophia Prime reactor and TCC proof reactor concepts, were created by
+**Michael Warren Song**. This repository is a neutral, public implementation of
+those ideas.
+
+## License
+
+- **Code:** MIT License (`LICENSE`).
+- **Docs:** Documentation text may be reused with attribution to **Michael Warren Song**.
