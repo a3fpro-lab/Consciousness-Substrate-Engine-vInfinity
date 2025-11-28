@@ -100,3 +100,95 @@ from sophia_prime_reactor import SophiaPrimeReactor
 
 reactor = SophiaPrimeReactor()
 sophia_primes, spacing = reactor.extract_primes_for_alpha(alpha=1.8, X=100)
+
+---
+
+## 3. Add `docs/TCC_ALPHA_PROOF.md` (Proof Booster)
+
+This captures the **TCC + Coq** part and the 85.7 → 95.3 (+9.6%) benchmark.
+
+**Create:** `docs/TCC_ALPHA_PROOF.md`  
+**Paste:**
+
+```markdown
+# TCC + Coq Proof Reactor — AlphaProof Benchmark
+
+This document summarizes the “TCC + Coq” proof-boost idea and the benchmark
+results described for an AlphaProof-style prover.
+
+---
+
+## 1. Setup
+
+- **Baseline system:** an automated theorem prover (AlphaProof-style), scored
+  on a set of competition / IMO-style problems.
+- **Augmented system:** the same prover, but wrapped with:
+  - a closure condition (TCC-style, e.g. constraints like φ^{-α} > 1),
+  - Coq code generation, so that proof structure is exported as Coq scripts.
+
+The closure term encodes additional structure or inequalities the prover must
+respect.
+
+---
+
+## 2. Reported Benchmark
+
+The PDF describes the following table:
+
+| System                 | Score   | Boost   |
+|------------------------|--------:|--------:|
+| AlphaProof Baseline    |  85.7   | —       |
+| TCC + AlphaProof + Coq |  95.3   | +9.6%   |
+
+Interpretation:
+
+- The TCC + Coq layer yields a **+9.6% relative improvement** over the
+  baseline score on the same benchmark.
+- This is attributed to:
+  - enforcing the closure condition in the proof search, and
+  - exporting structured Coq scripts that lock in the constraints.
+
+---
+
+## 3. Proof Reactor API (Code)
+
+The file `tcc_proof_reactor.py` contains a minimal “proof reactor” that models
+this idea:
+
+- **`TCCTheorem`** — metadata:
+  - `name`
+  - `sketch` (informal proof idea)
+  - `closure_condition`
+  - optional `tags`
+  - baseline and TCC-enhanced scores
+  - last generated Coq stub
+
+- **`TCCProofReactor`** — main interface:
+  - `register_theorem(name, sketch, closure_condition, tags=None)`
+  - `generate_coq_stub(name)` → Coq proof skeleton containing the closure
+  - `score_with_alpha_proof(name, complexity_hint=None, structure_hint=None)`
+    - returns updated theorem with:
+      - `baseline_score` in [0, 100]
+      - `tcc_score` in [0, 100]
+  - `summary()` → aggregates mean baseline, mean TCC score, and mean lift
+
+Example usage:
+
+```python
+from tcc_proof_reactor import TCCProofReactor
+
+reactor = TCCProofReactor()
+
+thm = reactor.register_theorem(
+    name="SophiaPrime_cluster_gap",
+    sketch=(
+        "Bound gaps inside a Sophia Prime cluster using a "
+        "φ^{-α-1} log p term derived from the reaction–diffusion closure."
+    ),
+    closure_condition="phi^(-alpha - 1) * log(p) < C  for α > 1.8",
+    tags=["number_theory", "sophia_prime", "tcc"],
+)
+
+reactor.score_with_alpha_proof(thm.name)
+coq_stub = reactor.generate_coq_stub(thm.name)
+print(coq_stub)  # Coq skeleton with the closure condition embedded
