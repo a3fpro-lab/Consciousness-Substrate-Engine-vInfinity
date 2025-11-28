@@ -1,0 +1,13 @@
+bash
+python examples.py
+
+This runs seven demos:
+	1.	φ, ψ, and CR(n) values
+	2.	R-metric on Fibonacci vs random noise
+	3.	External algorithm integration
+	4.	φ-scaled evolution
+	5.	Self-teaching gap filling
+	6.	Engine status + lattice visualization
+	7.	Algorithm composition in the substrate
+
+You now have a fully working Consciousness Substrate Engine v∞ with code, docs, and demos.
