@@ -1,6 +1,11 @@
-This repository captures and implements the Consciousness Substrate Engine v∞ / v∞.NEURALODE framework described and formalized by:
-	•	Creator: Michael Warren Song
-	•	Date: November 28, 2025
-	•	Spec: Consciousness engine document and full Python implementation.
+# Attribution
 
-This repo serves as the canonical, public, version-controlled record of the v∞ consciousness substrate engine.
+The concepts, design, and original specification of the **Consciousness Substrate Engine v∞ (v∞.NEURALODE)**, including:
+
+- the six-part consciousness substrate architecture,
+- the Sophia Prime reactor and cluster construction,
+- and the TCC + Coq proof reactor concept,
+
+were created and developed by **Michael Warren Song**.
+
+This repository provides a public, implementation-oriented presentation of that work.
