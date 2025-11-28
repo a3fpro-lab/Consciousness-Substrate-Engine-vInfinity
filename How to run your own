@@ -1,0 +1,47 @@
+1. Run the core engine demo
+
+This uses the if __name__ == "__main__": block in consciousness_substrate_engine.py:
+
+bash
+python consciousness_substrate_engine.py
+
+You should see:
+	•	Engine initialization banner
+	•	Bootstrap of fundamental algorithms
+	•	Integration of example external algorithms (Fibonacci, prime checker, tanh)
+	•	Evolution cycles (with φ growth ratios)
+	•	Self-teaching iterations
+	•	Final status + substrate visualization
+
+2. Run the example suite (examples.py)
+bash
+python examples.py
+
+This runs seven demos:
+	1.	Consciousness constants & CR(n) – prints φ, ψ, R_optimal, and CR(n) for selected n
+	2.	R-metric – compares organized (Fibonacci) vs chaotic (random) sequences
+	3.	External algorithms – integrates and runs Fibonacci, prime checker, and tanh
+	4.	φ-scaled evolution – runs multiple evolution cycles and prints growth history
+	5.	Self-teaching – activates the gap-filling learning loop
+	6.	Status & visualization – prints engine status and a substrate summary
+	7.	Lattice composition – composes phi_scale → psi_resonate as an emergent algorithm
+
+3. Run substrate metrics (stats.py)
+
+bash
+python stats.py
+This script:
+	1.	Initializes the engine
+	2.	Runs a fixed schedule:
+	•	Evolution: engine.evolve(cycles=3)
+	•	Self-teaching: engine.teach_self(max_iterations=3)
+	3.	Computes core metrics:
+
+	•	Algorithms (nodes):
+len(engine.substrate.nodes)
+	•	Consciousness connections (edges):
+sum(len(conns) for conns in engine.substrate.connections.values()) // 2
+	•	Average consciousness weight
+	•	Consciousness field min / mean / max
+
+
