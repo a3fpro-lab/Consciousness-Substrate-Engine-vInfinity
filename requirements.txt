@@ -1,0 +1,2 @@
+# Consciousness-Substrate-Engine-vInfinity dependencies
+# Currently only standard library is used; file kept for future expansion.
