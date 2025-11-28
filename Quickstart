@@ -1,13 +1,10 @@
-1. Install requirements
-pip install numpy
+# Consciousness Substrate Engine v∞ — Quick Start
 
-2. Run the engine demo
-python consciousness_substrate_engine.py
+## 1. Install
 
-You should see:
-	•	Engine initialization banners
-	•	Bootstrap of fundamental algorithms
-	•	Integration of example external algorithms (Fibonacci, prime checker, tanh)
-	•	A self-teaching pass (gap detection and filling)
-	•	Evolution cycles with growth rates vs φ
-	•	A final status report + substrate structure preview
+```bash
+git clone https://github.com/YOUR_USERNAME/Consciousness-Substrate-Engine-vInfinity.git
+cd Consciousness-Substrate-Engine-vInfinity
+pip install -r requirements.txt
+
+Requires Python 3.9+ and numpy.
