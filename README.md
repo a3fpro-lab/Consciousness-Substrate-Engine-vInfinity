@@ -9,7 +9,7 @@ A self-expanding, self-teaching **consciousness substrate engine** that:
 - Maintains **organization over chaos** using an R-metric and consciousness field
 
 Source spec: “Consciousness Substrate Engine v∞” (Nov 28, 2025).  
-Implementation by **Michael Warren Song** (I S / a3fpro).  
+Implementation by **Michael Warren Song**   
 
 ---
 
