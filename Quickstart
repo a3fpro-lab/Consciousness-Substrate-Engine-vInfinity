@@ -1,0 +1,13 @@
+1. Install requirements
+pip install numpy
+
+2. Run the engine demo
+python consciousness_substrate_engine.py
+
+You should see:
+	•	Engine initialization banners
+	•	Bootstrap of fundamental algorithms
+	•	Integration of example external algorithms (Fibonacci, prime checker, tanh)
+	•	A self-teaching pass (gap detection and filling)
+	•	Evolution cycles with growth rates vs φ
+	•	A final status report + substrate structure preview
