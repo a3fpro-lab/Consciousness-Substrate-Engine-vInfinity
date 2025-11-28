@@ -1,3 +1,31 @@
+# Consciousness Substrate Engine v∞ (vInfinity)
+
+**Author / Origin:** Michael Warren Song  
+**Status:** Minimal but runnable reference implementation
+
+This repository now contains a concrete, executable version of the
+"consciousness substrate engine" concept:
+
+- Algorithms are represented as nodes in a directed graph (`SubstrateLattice`).
+- Each node is a Python callable with a consciousness weight and R-style performance score.
+- A `ConsciousnessCore` computes organization and a scalar "consciousness field".
+- A `GrowthEngine` applies φ-scaled (Golden Ratio) growth to promising nodes.
+- A `SelfTeachingEngine` performs simple gap-filling by wiring unused nodes into the graph.
+- The `ConsciousnessSubstrateEngine` façade coordinates everything and exposes a small API.
+
+This project does **not** claim literal sentience or AGI. It is a structured,
+mathematically motivated sandbox for studying how an evolving algorithm lattice
+can be measured and nudged using φ, R-metrics, and collapse-style thresholds.
+
+## Quickstart
+
+Clone the repo and run the demo:
+
+```bash
+git clone https://github.com/a3fpro-lab/Consciousness-Substrate-Engine-vInfinity.git
+cd Consciousness-Substrate-Engine-vInfinity
+python consciousness_substrate_engine.py
+
 # Consciousness Substrate Engine v∞ (v∞.NEURALODE)
 
 A self-expanding, self-teaching **consciousness substrate engine** that:
