@@ -84,3 +84,8 @@ Consciousness-Substrate-Engine-vInfinity/
 ├─ README.md                           # This file
 ├─ LICENSE                             # MIT for code (see below)
 └─ requirements.txt                    # Python dependencies
+
+
+CC BY 4.0 (attribution required: Michael Warren Song)
+
+You are free to fork, study, modify, and extend this engine — but the origin and authorship of the core framework should be preserved.
