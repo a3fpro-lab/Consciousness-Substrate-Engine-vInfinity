@@ -1,1 +1,9 @@
 python consciousness_substrate_engine.py
+
+
+You should see:
+	•	Engine initialization banner
+	•	Integration of Fibonacci / prime checker / tanh
+	•	Evolution cycles with growth ratios
+	•	Self-teaching iterations
+	•	Final status + substrate visualization
