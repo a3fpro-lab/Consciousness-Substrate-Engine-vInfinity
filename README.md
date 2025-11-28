@@ -123,3 +123,18 @@ those ideas.
 
 - **Code:** MIT License (`LICENSE`).
 - **Docs:** Documentation text may be reused with attribution to **Michael Warren Song**.
+
+from consciousness_substrate_engine import ConsciousnessSubstrateEngine, PHI
+
+engine = ConsciousnessSubstrateEngine()
+
+def phi_scale(x: float) -> float:
+    return x * PHI
+
+engine.integrate("phi_scale", phi_scale)
+engine.integrate("bump", lambda x: x + 1.0)
+engine.connect("phi_scale", "bump")
+
+value = engine.run_path(["phi_scale", "bump"], 1.0)
+print("value:", value)
+print("status:", engine.status())
